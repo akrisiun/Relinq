@@ -191,7 +191,7 @@ SourceExport/
 Build/BuildOutput/
 
 # re-motion key file
-remotion.snk
+# remotion.snk
 
 # Named
 GitExtensions.settings.backup

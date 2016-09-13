@@ -1,6 +1,7 @@
 @echo off
 
 set keyfile=remotion.snk
+set sn=c:\bin\net46\sn.exe
 
 echo Current directory: %CD%
 echo Checking whether %keyfile% needs to be created...
@@ -15,7 +16,7 @@ goto end
 
 echo %keyfile% does not exist, generating...
 echo.
-sn.exe -k %keyfile%
+%sn% -k %keyfile%
 echo.
 
 if %ERRORLEVEL%==9009 goto nosn
@@ -33,7 +34,7 @@ exit /b 1
 
 :snerror
 
-echo There was an error executing 'sn.exe'.
+echo There was an error executing '%sn%'.
 
 exit /b 2
 
